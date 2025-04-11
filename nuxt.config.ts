@@ -23,5 +23,17 @@ export default defineNuxtConfig({
     }
   },
 
+  runtimeConfig: {
+    public: {
+      fastforexApiKey: process.env.FASTFOREX_API_KEY || ''
+    },
+    router: {
+      options: {
+        // Отключаем кэширование страниц
+        cache: false
+      }
+    }
+  },
+
   compatibilityDate: '2025-04-11'
 })
